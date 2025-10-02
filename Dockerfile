@@ -5,6 +5,7 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY requirements.txt .
+RUN pip install --no-cache-dir "pip<24.1" \
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 
