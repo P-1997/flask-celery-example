@@ -5,8 +5,9 @@ WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential gcc libssl-dev libffi-dev curl netcat \
+    build-essential gcc libssl-dev libffi-dev curl netcat-openbsd \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1
