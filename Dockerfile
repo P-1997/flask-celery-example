@@ -17,6 +17,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir "pip<24.1" \
  && pip install --no-cache-dir -r requirements.txt
 
+
 # Copy rest of the app
 COPY . .
 
